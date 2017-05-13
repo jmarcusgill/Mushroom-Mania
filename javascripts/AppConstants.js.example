@@ -1,0 +1,8 @@
+app.constant ("FIREBASE_CONFIG", {
+    apiKey: "AIzaSyAXDlgvFr3RIdCYVukLxp_X1zyalsWO4sM",
+    authDomain: "mushroom-mania-14cd5.firebaseapp.com",
+    databaseURL: "https://mushroom-mania-14cd5.firebaseio.com",
+    projectId: "mushroom-mania-14cd5",
+    storageBucket: "mushroom-mania-14cd5.appspot.com",
+    messagingSenderId: "238971769409"
+  });
