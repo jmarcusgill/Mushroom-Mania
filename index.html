@@ -11,14 +11,21 @@
   <div ng-controller="MushroomCtrl">
     <div class="row">
       <div class="col-xs-6 col-xs-offset-3">
-        <input type="radio" ng-click="newItem()"/>Poisonous
-        <input type="radio" ng-click="allItems()"/>Non Poisonous
+        <input type="radio" ng-model="isEdible" ng-value="false" ng-click="showShrooms()"/>Poisonous
+        <input type="radio" ng-model="isEdible" ng-value="true" ng-click="showShrooms()"/>Non Poisonous
+        <input type="text" name="" placeholder="Search for ..." ng-model="searchText">
+      </div>
+    </div>
+
+    <div ng-show="!showListView">
+      <div ng-repeat="mushroom in MushroomItems | filter: isEdible | filter: searchText">
+        <h3>{{mushroom.name}}</h3>
+        <p>{{mushroom.description}}</p>
       </div>
     </div>
 
 
 
-    <p>{{dog}}</p>
   </div>
 
 <!-- 3rd Party jscripts -->
